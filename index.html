@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,33 +6,48 @@
     <style>
       div{
         display: flex;
-        width: 100vw;
+        flex-direction: column;
         height: 100vh;
         justify-content: center;
         align-items: center;
-        color: #111e40;
+        background-color: #111e40;
+        border: 5px solid yellow;
+        border-radius: 0.8rem;
       }
       #hidden{
-        visibility: hidden;
-        color: green;
+        color: lightgreen;
         background-color: black;
+        visibility: hidden;
+        max-height: 30%;
+        font-size: 2rem;
+        border: 2px solid yellow;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        border-radius: 0.5rem;
+        min-width: 60%
+      }
+      #senti{
+      	text-decoration: none;
+        font-size: 3rem;
+        max-height: 40%;
+        
       }
       #senti:hover{
-        font-size: 3rem;
+        font-size: 5rem;
       }
     </style>
   </head>
   <body>
     <div>
-      <a href="https://subhajit01-simple-sentiment-analyser.hf.space/" id="senti">🤗</a>
-      <div id="hidden">Open Sentiment Analyser</div>
+      <a href="https://subhajit01-simple-sentiment-analyser.hf.space/" id="senti">🤗		</a>
+      <div id="hidden">Click me to open <b>Sentiment Analyser</b></div>
     </div>
     <script>
-      document.getElementById('senti').addEventListener('onmouseover', () => {
-        document.getElementById('hidden').style.visibility = visible;
+      document.getElementById('senti').addEventListener('mouseover', () => {
+        document.getElementById('hidden').style.visibility = "visible";
       })
-      document.getElementById('senti').addEventListener('onmouseout', () => {
-        document.getElementById('hidden').style.visibility = hidden;
+      document.getElementById('senti').addEventListener('mouseout', () => {
+        document.getElementById('hidden').style.visibility = "hidden";
       })
     </script>
   </body>
